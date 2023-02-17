@@ -1,13 +1,20 @@
 return {
-  -- lspconfig
-  {
-    "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      servers = {
-        pyright = {},
-        clangd = {},
-      },
+    -- lspconfig
+    {
+        "neovim/nvim-lspconfig",
+        commit = "649137c",
+        ---@class PluginLspOpts
+        opts = {
+            servers = {
+                pyright = {},
+                clangd = {},
+                rust_analyzer = {},
+                hls = {},
+                lua_ls = {},
+                zls = {},
+            },
+        },
+    },
     },
   },
 
