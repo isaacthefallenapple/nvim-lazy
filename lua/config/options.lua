@@ -3,3 +3,6 @@
 -- Add any additional options here
 vim.opt.hlsearch = false
 vim.opt.swapfile = false
+
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
