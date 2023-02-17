@@ -14,6 +14,7 @@ return {
     opts = {
       colorscheme = "oxocarbon",
     },
+    version = "*",
   },
   {
     "nvim-lualine/lualine.nvim",
