@@ -65,4 +65,17 @@ return {
       },
     },
   },
+
+  -- configure which-key
+  {
+    "folke/which-key.nvim",
+    opts = {
+      plugins = {
+        presets = {
+          operators = false,
+          motions = false,
+        }
+      }
+    }
+  }
 }
