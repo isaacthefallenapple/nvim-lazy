@@ -55,4 +55,14 @@ return {
       },
     },
   },
+
+  -- disable autoclose of ' for Rust lifetimes
+  {
+    "echasnovski/mini.pairs",
+    opts = {
+      mappings = {
+        ["'"] = { neigh_pattern = '[^%a<&\\][^>]' },
+      },
+    },
+  },
 }
