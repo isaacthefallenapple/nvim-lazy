@@ -42,4 +42,33 @@ return {
             },
         },
     },
+
+    -- cmp
+    {
+        "hrsh7th/nvim-cmp",
+        ---@param opts cmp.ConfigSchema
+        opts = function(_, opts)
+            local cmp = require("cmp")
+            opts.mapping = cmp.mapping.preset.insert({
+                ["<C-b>"] = cmp.mapping.scroll_docs( -4),
+                ["<C-f>"] = cmp.mapping.scroll_docs(4),
+                ["<C-Space>"] = cmp.mapping.complete(),
+                ["<C-e>"] = cmp.mapping.abort(),
+                ["<CR>"] = function(fallback)
+                    if cmp.visible() and cmp.get_active_entry() then
+                        cmp.confirm({ select = false })
+                    else
+                        cmp.abort()
+                        fallback()
+                    end
+                end,
+                ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+                ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+            })
+            opts.preselect = cmp.PreselectMode.None
+            opts.completion = {
+                completeopt = "menu,menuone,noinsert,noselect",
+            }
+        end,
+    },
 }
