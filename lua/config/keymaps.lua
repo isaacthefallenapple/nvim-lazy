@@ -7,7 +7,7 @@
 -- See `:help vim.keymap.set()`
 
 -- Open Netrw
-vim.keymap.set('n', '<leader>pv', '<Cmd>Ex<CR>', {})
+vim.keymap.set('n', '<leader>pv', '<Cmd>Ex<CR>', { desc = "Open Netrw" })
 
 -- Re-center after jump
 vim.keymap.set('n', '<C-d>', '<C-d>zz', {})
@@ -21,3 +21,10 @@ vim.keymap.set({ 'n', 'v', 'o' }, 'Q', 'gq')
 -- Undo H, L remap
 vim.keymap.del('n', 'H')
 vim.keymap.del('n', 'L')
+
+-- Add alternative visual block mode keymap
+vim.keymap.set({ 'n' }, '<leader>v', '<C-v>', { desc = "Visual Block mode" })
+
+-- Insert newlines without entering Insert mode
+vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = "Insert newline below" })
+vim.keymap.set('n', '<leader>O', 'O<Esc>', { desc = "Insert newline below" })
