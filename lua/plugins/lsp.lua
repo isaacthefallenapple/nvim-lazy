@@ -2,7 +2,8 @@ return {
     -- lspconfig
     {
         "neovim/nvim-lspconfig",
-        commit = "649137c",
+        commit = "origin/master",
+        pin = true,
         ---@class PluginLspOpts
         opts = {
             servers = {
