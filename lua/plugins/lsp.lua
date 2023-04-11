@@ -13,6 +13,9 @@ return {
                 hls = {},
                 lua_ls = {},
                 zls = {},
+                vls = {
+                    root_dir = require("lspconfig").util.root_pattern("v.mod", ".git", "*.v"),
+                },
             },
         },
     },
@@ -40,6 +43,7 @@ return {
                 "rust",
                 "haskell",
                 "zig",
+                "v",
             },
         },
     },
@@ -72,4 +76,10 @@ return {
             }
         end,
     },
+
+    -- V
+    {
+        "ollykel/v-vim",
+        event = "BufEnter *.v",
+    }
 }
