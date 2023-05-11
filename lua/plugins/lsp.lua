@@ -16,6 +16,7 @@ return {
                 vls = {
                     root_dir = require("lspconfig").util.root_pattern("v.mod", ".git", "*.v"),
                 },
+                elmls = {},
             },
         },
     },
@@ -44,6 +45,7 @@ return {
                 "haskell",
                 "zig",
                 "v",
+                "elm",
             },
         },
     },
