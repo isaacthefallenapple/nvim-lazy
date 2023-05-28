@@ -78,6 +78,7 @@ return {
   -- configure which-key
   {
     "folke/which-key.nvim",
+    enabled = false,
     opts = {
       plugins = {
         presets = {

@@ -4,18 +4,21 @@
 
 -- [[ Remove garbage default comment format options ]]
 -- See `:help formatoptions`
-local format_group = vim.api.nvim_create_augroup('FormatOptions', {})
-vim.api.nvim_create_autocmd('BufEnter', {
-    group = format_group,
-    callback = function() vim.opt.formatoptions = vim.opt.formatoptions - { 'o' } end,
+local format_group = vim.api.nvim_create_augroup("FormatOptions", {})
+vim.api.nvim_create_autocmd("BufEnter", {
+  group = format_group,
+  callback = function()
+    vim.opt.formatoptions = vim.opt.formatoptions - { "o" }
+  end,
 })
 
-local filetype_group = vim.api.nvim_create_augroup('Filetype', {})
-vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
-    pattern = '*.v',
-    callback = function(_)
-        vim.o.filetype = 'vlang'
-    end,
+local filetype_group = vim.api.nvim_create_augroup("Filetype", {})
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  group = filetype_group,
+  pattern = "*.v",
+  callback = function(_)
+    vim.o.filetype = "vlang"
+  end,
 })
 
 local startup_group = vim.api.nvim_create_augroup("Startup", {})
