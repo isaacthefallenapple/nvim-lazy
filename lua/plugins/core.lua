@@ -22,8 +22,8 @@ return {
     opts = {
       options = {
         -- theme = "oxocarbon",
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        component_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
       },
     },
   },
@@ -34,7 +34,7 @@ return {
     opts = {
       draw = {
         delay = 50,
-        animation = require("mini.indentscope").gen_animation.none()
+        animation = require("mini.indentscope").gen_animation.none(),
       },
     },
   },
@@ -62,7 +62,7 @@ return {
     "echasnovski/mini.pairs",
     opts = {
       mappings = {
-        ["'"] = { neigh_pattern = '[^%a<&\\][^>]' },
+        ["'"] = { neigh_pattern = "[^%a<&\\][^>]" },
       },
     },
   },
@@ -75,8 +75,14 @@ return {
         presets = {
           operators = false,
           motions = false,
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
+
+  -- zig.vim
+  {
+    "ziglang/zig.vim",
+    ft = "zig",
+  },
 }
