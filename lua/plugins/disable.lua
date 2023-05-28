@@ -19,4 +19,7 @@ return {
 
   -- disable illuminate (word highlight on hover)
   { "RRethy/vim-illuminate", enabled = false },
+
+  -- disable alpha ("home screen")
+  { "goolord/alpha-nvim", enabled = false },
 }
