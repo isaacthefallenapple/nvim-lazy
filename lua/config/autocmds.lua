@@ -21,15 +21,6 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   end,
 })
 
-local startup_group = vim.api.nvim_create_augroup("Startup", {})
--- :cd into <dir> when opening it with nvim <dir>
-vim.api.nvim_create_autocmd("VimEnter", {
-  group = startup_group,
-  callback = function(_)
-    vim.cmd({ cmd = "cd", args = { "%:p:h" } })
-  end,
-})
-
 local startup_group = vim.api.nvim_create_augroup("Startup", { clear = true })
 
 -- :cd into <dir> when opening it with nvim <dir>
