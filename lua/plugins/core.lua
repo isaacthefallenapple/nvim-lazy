@@ -28,6 +28,14 @@ return {
     },
   },
 
+  -- disable tab behavior
+  {
+    "L3MON4D3/LuaSnip",
+    keys = function()
+      return {}
+    end,
+  },
+
   -- disable indentscope animation
   {
     "echasnovski/mini.indentscope",
