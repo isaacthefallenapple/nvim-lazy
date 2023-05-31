@@ -20,10 +20,6 @@ vim.keymap.set("n", "N", "Nzzzv", {})
 -- Replace ex mode with gq
 vim.keymap.set({ "n", "v", "o" }, "Q", "gq")
 
--- Undo H, L remap
-vim.keymap.del("n", "H")
-vim.keymap.del("n", "L")
-
 -- Add alternative visual block mode keymap
 vim.keymap.set({ "n" }, "<leader>v", "<C-v>", { desc = "Visual Block mode" })
 
