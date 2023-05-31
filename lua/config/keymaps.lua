@@ -6,6 +6,8 @@
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 
+vim.keymap.set({ "n", "x" }, "<Space>", "<Nop>")
+
 -- Open Netrw
 vim.keymap.set("n", "<leader>pv", "<Cmd>Ex<CR>", { desc = "Open Netrw" })
 
