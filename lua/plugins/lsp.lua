@@ -7,7 +7,16 @@ return {
       opts.servers = {
         pyright = {},
         clangd = {},
-        rust_analyzer = {},
+        rust_analyzer = {
+          ["rust-analzyer"] = {
+            cargo = {
+              features = "all",
+            },
+            check = {
+              features = "all",
+            },
+          },
+        },
         hls = {},
         lua_ls = { settings = { Lua = { workspace = { checkThirdParty = false }, format = { enable = false } } } },
         zls = { root_dir = require("lspconfig").util.root_pattern("build.zig") },
