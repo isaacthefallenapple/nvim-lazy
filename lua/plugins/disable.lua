@@ -22,4 +22,7 @@ return {
 
   -- disable alpha ("home screen")
   { "goolord/alpha-nvim", enabled = false },
+
+  -- disable flash (folke's movement thing)
+  { "folke/flash.nvim", enabled = false },
 }
