@@ -57,7 +57,6 @@ return {
         "zig",
         "v",
         "elm",
-        "bash",
         "lua",
       },
     },
