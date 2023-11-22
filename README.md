@@ -1,3 +1,6 @@
+**You served me well, but alas... I have my own config now. Farewell my
+sweet summer child.**
+
 # LazyVim
 
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim)
