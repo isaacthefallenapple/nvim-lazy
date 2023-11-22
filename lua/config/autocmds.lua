@@ -21,6 +21,14 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  group = filetype_group,
+  pattern = "*.purs",
+  callback = function(_)
+    vim.bo.filetype = "purescript"
+  end,
+})
+
 local startup_group = vim.api.nvim_create_augroup("Startup", { clear = true })
 
 -- :cd into <dir> when opening it with nvim <dir>

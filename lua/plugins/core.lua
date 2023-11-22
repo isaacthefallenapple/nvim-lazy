@@ -56,7 +56,7 @@ return {
   -- disable TreeSitter indent for Python (https://github.com/nvim-treesitter/nvim-treesitter/issues/1136)
   {
     "nvim-treesitter/nvim-treesitter",
-    ---@type TSConfig
+    --@type TSConfig
     opts = {
       indent = {
         enable = true,
@@ -94,4 +94,16 @@ return {
     "ziglang/zig.vim",
     ft = "zig",
   },
+
+  -- purescript-vim
+  {
+    "purescript-contrib/purescript-vim",
+    ft = "purescript",
+  },
+
+  -- nvlime
+  { "monkoose/nvlime", ft = "lisp", dependencies = { "monkoose/parsley" } },
+
+  -- swift.vim
+  { "keith/swift.vim", ft = "swift" },
 }

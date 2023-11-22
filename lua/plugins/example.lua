@@ -150,6 +150,7 @@ return {
         "markdown",
         "markdown_inline",
         "python",
+        "purescript",
         "query",
         "regex",
         "tsx",

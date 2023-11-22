@@ -24,28 +24,54 @@ return {
           root_dir = require("lspconfig").util.root_pattern("v.mod", ".git", "*.v"),
         },
         elmls = {},
+        purescriptls = {},
+        sourcekit = {},
       }
     end,
   },
 
-  -- null-ls
+  -- conform.nvim
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function(_, opts)
-      local nls = require("null-ls")
-      nls.setup(vim.tbl_extend("keep", {
-        debounce = 150,
-        sources = {
-          nls.builtins.formatting.isort,
-          nls.builtins.formatting.black,
-          nls.builtins.formatting.stylua,
-          nls.builtins.formatting.prettier.with({
-            filetypes = { "css", "html", "json", "markdown" },
-          }),
+    "stevearc/conform.nvim",
+    ---@type table<string, conform.FormatterUnit[]>
+    opts = {
+      formatters = {
+        ["purescript-tidy"] = {
+          command = "/home/timob/.local/share/nvim/mason/bin/purs-tidy",
+          args = { "format" },
+          stdin = true,
         },
-      }, opts))
-    end,
+        ["swift-format"] = {
+          command = "/home/timob/.swift/swift-format/.build/release/swift-format",
+        },
+      },
+      formatters_by_ft = {
+        html = { "prettierd" },
+        json = { "prettierd" },
+        purescript = { "purescript-tidy" },
+        swift = { "swift-format" },
+      },
+    },
   },
+
+  -- null-ls
+  -- {
+  --   "nvimtools/none-ls.nvim",
+  --   config = function(_, opts)
+  --     local nls = require("null-ls")
+  --     nls.setup(vim.tbl_extend("keep", {
+  --       debounce = 150,
+  --       sources = {
+  --         nls.builtins.formatting.isort,
+  --         nls.builtins.formatting.black,
+  --         nls.builtins.formatting.stylua,
+  --         nls.builtins.formatting.prettier.with({
+  --           filetypes = { "css", "html", "json", "markdown" },
+  --         }),
+  --       },
+  --     }, opts))
+  --   end,
+  -- },
 
   -- treesitter
   {
@@ -58,6 +84,9 @@ return {
         "v",
         "elm",
         "lua",
+        "html",
+        "sql",
+        -- "swift",
       },
     },
   },

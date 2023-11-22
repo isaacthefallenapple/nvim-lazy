@@ -6,7 +6,7 @@ return {
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 
   -- disable spectre
-  { "windwp/nvim-spectre", enabled = false },
+  { "nvim-pack/nvim-spectre", enabled = false },
 
   -- disable notify
   { "rcarriga/nvim-notify", enabled = false },
@@ -25,4 +25,19 @@ return {
 
   -- disable flash (folke's movement thing)
   { "folke/flash.nvim", enabled = false },
+
+  -- disable dressing
+  { "stevearc/dressing.nvim", enabled = false },
+
+  -- disable nui
+  { "MunifTanjim/nui.nvim", enabled = false },
+
+  -- disable dashboard
+  { "nvimdev/dashboard-nvim", enabled = false },
+
+  -- disable startuptime
+  { "dstein64/vim-startuptime", enabled = false },
+
+  -- disable persistence
+  { "folke/persistence.nvim", enabled = false },
 }
